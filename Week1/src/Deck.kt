@@ -1,5 +1,6 @@
 class Deck {
 
+    val cards = mutableSetOf<Card>()
 
     fun createDeck(): MutableSet<Card> {
         // unicode characters for the suit
@@ -17,6 +18,22 @@ class Deck {
         }
 
         return cards
+    }
+
+    fun dealHand(deck: MutableList<Card>, numberOfCards: Int = 2): MutableList<Card> {
+        val cardsToBeDealt = mutableListOf<Card>()
+
+        // if number of cards = 0, then this function will return empty mutable list
+        var i = numberOfCards
+        while (i > 0) {
+            val card = deck.random()
+            cardsToBeDealt.add(card)
+            deck.remove(card)
+
+            i -= 1
+        }
+
+        return cardsToBeDealt
     }
 
 }
