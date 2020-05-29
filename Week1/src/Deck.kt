@@ -34,4 +34,31 @@ class Deck {
         return cardsToBeDealt
     }
 
+    fun evaluateHand(hand: MutableList<Card>): Int {
+        var total = 0
+        for (card in hand) {
+            val pip = card.pip
+            when (pip) {
+                "2" -> total += 2
+                "3" -> total += 3
+                "4" -> total += 4
+                "5" -> total += 5
+                "6" -> total += 6
+                "7" -> total += 7
+                "8" -> total += 8
+                "9" -> total += 9
+                "10" -> total += 10
+                "J" -> total += 10
+                "Q" -> total += 10
+                "K" -> total += 10
+                "A" -> total += 11
+                else -> {
+                    // unknown value
+                }
+            }
+        }
+
+        return total
+    }
+
 }
