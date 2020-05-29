@@ -1,7 +1,5 @@
 class Deck {
 
-    val cards = mutableSetOf<Card>()
-
     fun createDeck(): MutableSet<Card> {
         // unicode characters for the suit
         // /u2663 - club, /u2660 - spade
