@@ -1,4 +1,4 @@
-class Deck {
+class Blackjack {
 
     fun createDeck(): MutableSet<Card> {
         // unicode characters for the suit
