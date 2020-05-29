@@ -61,4 +61,17 @@ class Deck {
         return total
     }
 
+    fun printResults(hand: MutableList<Card>, total: Int) {
+        for ((pip, suit) in hand) {
+            println("$pip$suit")
+        }
+
+        println("For a total of: $total")
+        if (total == 21) {
+            println("You Win!")
+        } else if (total == 22) {
+            println("You Lose!")
+        }
+    }
+
 }
