@@ -1,0 +1,1 @@
+data class Sponsorship(val patronId: Int, val catId: Int)
