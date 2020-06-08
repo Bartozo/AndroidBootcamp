@@ -22,5 +22,5 @@ open class MenuItem(name: String, price: Float, id: Int) {
     fun getId(): Int {
         return this.id
     }
-    
+
 }
