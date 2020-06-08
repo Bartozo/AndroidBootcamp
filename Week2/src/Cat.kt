@@ -1,10 +1,10 @@
 class Cat(name: String, breed: String, sex: Sex, shelterId: Int, catId: Int) {
-    val name: String
-    val breed: String
-    val sex: Sex
-    val shelterId: Int
-    val catId: Int
-    val sponsorships = listOf<Sponsorship>()
+    private val name: String
+    private val breed: String
+    private val sex: Sex
+    private val shelterId: Int
+    private val catId: Int
+    private val sponsorships = listOf<Sponsorship>()
 
     init {
         this.name = name
@@ -14,6 +14,30 @@ class Cat(name: String, breed: String, sex: Sex, shelterId: Int, catId: Int) {
         this.catId = catId
     }
 
+
+    // Getters
+    fun getName(): String {
+        return this.name
+    }
+
+    fun getBreed(): String {
+        return this.breed
+    }
+
+    fun getSex(): Sex {
+        return this.sex
+    }
+
+    fun getShelterid(): Int {
+        return this.shelterId
+    }
+
+    fun getCatid(): Int {
+        return this.catId
+    }
+
+
+    // Other
     fun adoptCat(customerId: Int) {
         println("Cat has been adopted by customer with id $customerId")
     }

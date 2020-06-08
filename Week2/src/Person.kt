@@ -12,4 +12,25 @@ open class Person(firstName: String, lastName: String, id: Int, phoneNumber: Str
         this.phoneNumber = phoneNumber
         this.email = email
     }
+
+    // Getters
+    fun getFirstName(): String {
+        return this.firstName
+    }
+
+    fun getLastName(): String {
+        return this.lastName
+    }
+
+    fun getId(): Int {
+        return this.id
+    }
+
+    fun getPhoneNumber(): String {
+        return this.phoneNumber
+    }
+
+    fun getEmail(): String {
+        return this.email
+    }
 }
