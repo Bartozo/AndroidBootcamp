@@ -28,6 +28,7 @@ object CafeSystem {
         Food("Chips",5.0f,5),
         Food("Cake",14.0f,6)
     )
+    val receipts: MutableList<Receipt> = mutableListOf()
 
     fun addCatsToShelters() {
         for (shelter in shelters) {
@@ -60,6 +61,47 @@ object CafeSystem {
             println("${it.getFirstName()} ${it.getLastName()}, isEmployee: $isEmployee, id: ${it.getId()}")
         }
     }
+
+    fun printRaport() {
+        println("Printing raport...")
+        println("total number of transactions: ${receipts.count()}")
+
+        val customers: MutableSet<Person> = mutableSetOf()
+        for (receipt in receipts) {
+            val customerId = receipt.getCstomerId()
+            val customer = people.find { it.getId() == customerId }
+            if (customer != null) {
+                customers.add(customer)
+            }
+        }
+        println("total number of customers: ${customers.count()}")
+
+        val nonEmployeeNumber = customers.count {
+            it is Patron
+        }
+        println("total number of non-employee: $nonEmployeeNumber")
+
+        println("Adoption per shelters:")
+        for (shelter in shelters) {
+            println("shelter: ${shelter.getAddress()}")
+            println("cats in shelter:")
+            for (cat in shelter.getCats()) {
+                println("${cat.getName()}, ${cat.getBreed()}, ${cat.getSex()}")
+            }
+        }
+
+        println("Top selling menu items:")
+        val uniqueMenuItem: MutableSet<MenuItem> = mutableSetOf()
+        for (receipt in receipts) {
+            for (item in receipt.getMenuItems()) {
+                uniqueMenuItem.add(item)
+            }
+        }
+        for(item in uniqueMenuItem) {
+            println("item: ${item.getName()}")
+        }
+    }
+
 }
 
 fun main() {
@@ -73,7 +115,21 @@ fun main() {
     CafeSystem.printSheltersInTheSystem()
     CafeSystem.printPeopleInTheSystem()
 
+    // generate random receipt
+    generateRandomReceipt()
+    generateRandomReceipt()
+    generateRandomReceipt()
 
+    // generate raport
+    CafeSystem.printRaport()
 
+}
+fun generateRandomReceipt() {
+    val customer = CafeSystem.people.random()
+    val newReceipt = Receipt(customer.getId())
+    newReceipt.addMenuItem(CafeSystem.menuItems.random())
+    newReceipt.addMenuItem(CafeSystem.menuItems.random())
+    newReceipt.addMenuItem(CafeSystem.menuItems.random())
 
+    CafeSystem.receipts.add(newReceipt)
 }
