@@ -8,4 +8,19 @@ open class MenuItem(name: String, price: Float, id: Int) {
         this.price = price
         this.id = id
     }
+
+
+    // Getters
+    fun getName(): String {
+        return this.name
+    }
+
+    fun getPrice(): Float {
+        return this.price
+    }
+
+    fun getId(): Int {
+        return this.id
+    }
+    
 }
