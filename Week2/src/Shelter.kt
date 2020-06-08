@@ -29,7 +29,7 @@ class Shelter(id: Int, address: String, phoneNumber: String) {
 
     fun getCat(catId: Int): Cat? {
         for (cat in cats) {
-            if (cat.catId == catId) {
+            if (cat.getCatid() == catId) {
                 return cat
             }
         }
