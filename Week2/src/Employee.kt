@@ -1,7 +1,7 @@
 
 class Employee(firstName: String, lastName: String, id: Int,
                phoneNumber: String, email: String, hireDate: String,
-                securityNumber: Int, salary: Double) : People(firstName, lastName, id,
+                securityNumber: Int, salary: Double) : Person(firstName, lastName, id,
     phoneNumber, email) {
 
     val hireDate: String

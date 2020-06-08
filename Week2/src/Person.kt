@@ -1,4 +1,4 @@
-open class People(firstName: String, lastName: String, id: Int, phoneNumber: String, email: String) {
+open class Person(firstName: String, lastName: String, id: Int, phoneNumber: String, email: String) {
     private val firstName: String
     private val lastName: String
     private val id: Int
