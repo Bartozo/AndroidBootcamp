@@ -4,7 +4,7 @@ class Cat(name: String, breed: String, sex: Sex, shelterId: Int, catId: Int) {
     val sex: Sex
     val shelterId: Int
     val catId: Int
-    val sponsorships = listOf<String>()
+    val sponsorships = listOf<Sponsorship>()
 
     init {
         this.name = name
