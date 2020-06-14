@@ -80,8 +80,15 @@ class MainActivity : AppCompatActivity() {
         showDialog(title, message)
     }
 
+    /**
+     * Show the dialog with basic information's
+     * about the app
+     */
     private fun showAboutInfo() {
-        TODO("Not yet implemented")
+        val title = getString(R.string.aboutTitle)
+        val message = getString(R.string.aboutMessage)
+
+        showDialog(title, message)
     }
 
     private fun newQuote() {

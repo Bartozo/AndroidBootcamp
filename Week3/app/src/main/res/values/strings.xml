@@ -4,9 +4,12 @@
     <string name="location">Location: %1$d</string>
     <string name="email">Email: %1$d</string>
     <string name="newQuote">New Quote</string>
+
     <string name="aboutMenu">About</string>
     <string name="versionMenu">App version</string>
     <string name="shareMenu">Share this app with your Friends</string>
     <string name="shareTitle">Share this app!</string>
     <string name="shareMessage">Tell your friends about this amazing app, which was written in Kotlin</string>
+    <string name="aboutTitle">Hello!</string>
+    <string name="aboutMessage">This app was written in kotlin language by Bartosz Król for week 3 homework.</string>
 </resources>
