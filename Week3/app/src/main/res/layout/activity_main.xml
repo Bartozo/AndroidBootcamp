@@ -57,7 +57,7 @@
             android:textSize="18sp" />
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/newQuoteButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

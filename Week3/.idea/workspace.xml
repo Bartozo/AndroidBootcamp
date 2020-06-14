@@ -10,10 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01462d2d-0cfe-40c4-be78-712e07856237" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/blink.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/bounce.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/businesscard/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/businesscard/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +163,22 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1275" y="466" key="AndroidCreateXmlResourceDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592125757841" />
+    <state width="754" height="270" key="GridCell.Tab.0.bottom" timestamp="1592137323639">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="754" height="270" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1592137323639" />
+    <state width="754" height="270" key="GridCell.Tab.0.center" timestamp="1592137323638">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="754" height="270" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1592137323638" />
+    <state width="754" height="270" key="GridCell.Tab.0.left" timestamp="1592137323636">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="754" height="270" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1592137323636" />
+    <state width="754" height="270" key="GridCell.Tab.0.right" timestamp="1592137323638">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="754" height="270" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1592137323638" />
     <state x="479" y="256" key="run.anything.popup" timestamp="1592136024961">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

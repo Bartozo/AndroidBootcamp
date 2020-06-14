@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var nameTextView: TextView
     private lateinit var locationTextView: TextView
     private lateinit var emailTextView: TextView
-    private lateinit var newQuoteButton: Button
+    private lateinit var newQuoteButton: MaterialButton
 
     // Object
     companion object {
