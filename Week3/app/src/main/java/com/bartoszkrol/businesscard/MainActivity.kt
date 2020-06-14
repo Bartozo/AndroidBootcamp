@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         "\"I have not failed. I've just found 10,000 ways that won't work.\" --Thomas A. Edison",
         "\"The distance between insanity and genius is measured only by success.\" --Bruce Feirstein",
         "\"If you can't explain it simply, you don't understand it well enough.\" --Albert Einstein",
-        "\"Success is the sum of small efforts, repeated day-in and day-out.\" --Robert Collier"
+        "\"Success is the sum of small efforts, repeated day-in and day-out.\" --Robert Collier",
         "\"The starting point of all achievement is desire.\" --Napoleon Hill"
     )
 
