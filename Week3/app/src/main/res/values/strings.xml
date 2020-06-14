@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">BusinessCard</string>
-    <string name="name">Name: %1$d</string>
-    <string name="location">Location: %1$d</string>
-    <string name="email">Email: %1$d</string>
+    <string name="name">Name: %1$s</string>
+    <string name="location">Location: %1$s</string>
+    <string name="email">Email: %1$s</string>
     <string name="newQuote">New Quote</string>
 
     <string name="aboutMenu">About</string>

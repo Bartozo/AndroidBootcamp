@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         "\"Success is the sum of small efforts, repeated day-in and day-out.\" --Robert Collier",
         "\"The starting point of all achievement is desire.\" --Napoleon Hill"
     )
+    private val name = "Bartosz"
+    private val location = "Poland"
+    private val email = "Bartosz@email.com"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +53,11 @@ class MainActivity : AppCompatActivity() {
         newQuoteButton.setOnClickListener { view ->
             newQuote()
         }
+
+        nameTextView.text = getString(R.string.name, name)
+        locationTextView.text = getString(R.string.location, location)
+        emailTextView.text = getString(R.string.email, email)
+
 
         // Check if there is saved instance state
         if (savedInstanceState != null) {
