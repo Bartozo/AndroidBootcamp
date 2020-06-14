@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -51,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         newQuoteButton = findViewById(R.id.newQuoteButton)
 
         newQuoteButton.setOnClickListener { view ->
+            val bounceAnimation = AnimationUtils.loadAnimation(this, R.anim.bounce)
+            view.startAnimation(bounceAnimation)
             newQuote()
         }
 
@@ -125,12 +128,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Update quoteTextView with a new random quote
+     * Update quoteTextView with a new random quote and a nice
+     * blink animation
      */
     private fun newQuote() {
         val quote = quotes.random()
 
         quoteTextView.text = quote
+
+        val blinkAnimation = AnimationUtils.loadAnimation(this, R.anim.blink)
+        quoteTextView.startAnimation(blinkAnimation)
     }
 
     /**

@@ -10,12 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01462d2d-0cfe-40c4-be78-712e07856237" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/blink.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/anim/bounce.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/businesscard/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/businesscard/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,14 +141,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1096" y="340" key="AndroidCreateResourceDirectoryDialog" timestamp="1592125501923">
+    <state x="1096" y="340" key="AndroidCreateResourceDirectoryDialog" timestamp="1592136304862">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1096" y="340" key="AndroidCreateResourceDirectoryDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592125501923" />
-    <state x="1096" y="340" key="AndroidCreateResourceFileDialog" timestamp="1592125509760">
+    <state x="1096" y="340" key="AndroidCreateResourceDirectoryDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592136304862" />
+    <state x="1096" y="340" key="AndroidCreateResourceFileDialog" timestamp="1592136450524">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1096" y="340" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592125509760" />
+    <state x="1096" y="340" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592136450524" />
     <state x="1275" y="466" key="AndroidCreateXmlResourceDialog" timestamp="1592125757841">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
