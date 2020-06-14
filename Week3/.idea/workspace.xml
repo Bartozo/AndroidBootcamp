@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01462d2d-0cfe-40c4-be78-712e07856237" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/businesscard/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/businesscard/MainActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -146,9 +145,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1275" y="466" key="AndroidCreateXmlResourceDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592125757841" />
-    <state x="479" y="256" key="run.anything.popup" timestamp="1592125406348">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="479" y="238" key="run.anything.popup" timestamp="1592127404547">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="479" y="238" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1592127404547" />
     <state x="479" y="256" key="run.anything.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1592125406348" />
   </component>
 </project>

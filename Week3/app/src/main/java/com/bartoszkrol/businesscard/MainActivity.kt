@@ -2,6 +2,8 @@ package com.bartoszkrol.businesscard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -38,6 +40,35 @@ class MainActivity : AppCompatActivity() {
         newQuoteButton.setOnClickListener { view ->
             newQuote()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.actionAbout -> showAboutInfo()
+            R.id.actionShare -> shareApp()
+            R.id.actionVersion -> showVersion()
+            else -> {
+                // Unknown value
+            }
+        }
+        return true
+    }
+
+    private fun showVersion() {
+        TODO("Not yet implemented")
+    }
+
+    private fun shareApp() {
+        TODO("Not yet implemented")
+    }
+
+    private fun showAboutInfo() {
+        TODO("Not yet implemented")
     }
 
     private fun newQuote() {
