@@ -59,10 +59,17 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
-    
+
+    /**
+     * Show the dialog for the app version
+     */
     private fun showVersion() {
-        TODO("Not yet implemented")
+        val appName = getString(R.string.app_name)
+        val versionName = BuildConfig.VERSION_NAME
+
+        showDialog(appName, versionName)
     }
+
 
     private fun shareApp() {
         TODO("Not yet implemented")
