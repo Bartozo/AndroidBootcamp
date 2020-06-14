@@ -7,4 +7,6 @@
     <string name="aboutMenu">About</string>
     <string name="versionMenu">App version</string>
     <string name="shareMenu">Share this app with your Friends</string>
+    <string name="shareTitle">Share this app!</string>
+    <string name="shareMessage">Tell your friends about this amazing app, which was written in Kotlin</string>
 </resources>

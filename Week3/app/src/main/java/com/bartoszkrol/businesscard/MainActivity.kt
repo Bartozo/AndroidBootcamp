@@ -70,9 +70,14 @@ class MainActivity : AppCompatActivity() {
         showDialog(appName, versionName)
     }
 
-
+    /**
+     * Show the dialog about sharing the app
+     */
     private fun shareApp() {
-        TODO("Not yet implemented")
+        val title = getString(R.string.shareTitle)
+        val message = getString(R.string.shareMessage)
+
+        showDialog(title, message)
     }
 
     private fun showAboutInfo() {
