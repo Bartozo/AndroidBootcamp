@@ -7,7 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01462d2d-0cfe-40c4-be78-712e07856237" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/business.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +32,17 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="NewFeatures" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -46,6 +58,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="memory.settings.postsync.last.time.stamp" value="1592122343268" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -119,5 +136,23 @@
       <updated>1592122337001</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1096" y="340" key="AndroidCreateResourceDirectoryDialog" timestamp="1592125501923">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1096" y="340" key="AndroidCreateResourceDirectoryDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592125501923" />
+    <state x="1096" y="340" key="AndroidCreateResourceFileDialog" timestamp="1592125509760">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1096" y="340" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592125509760" />
+    <state x="1275" y="466" key="AndroidCreateXmlResourceDialog" timestamp="1592125757841">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1275" y="466" key="AndroidCreateXmlResourceDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1592125757841" />
+    <state x="479" y="256" key="run.anything.popup" timestamp="1592125406348">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="479" y="256" key="run.anything.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1592125406348" />
   </component>
 </project>
