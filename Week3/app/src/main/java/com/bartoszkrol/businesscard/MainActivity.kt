@@ -100,8 +100,13 @@ class MainActivity : AppCompatActivity() {
         showDialog(title, message)
     }
 
+    /**
+     * Update quoteTextView with a new random quote
+     */
     private fun newQuote() {
-        TODO("Not yet implemented")
+        val quote = quotes.random()
+
+        quoteTextView.text = quote
     }
 
     /**
