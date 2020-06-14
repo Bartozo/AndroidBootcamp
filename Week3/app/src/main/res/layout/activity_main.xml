@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/business" />
+        tools:srcCompat="@drawable/business"
+        android:background="@drawable/business"/>
 
 
     <LinearLayout
