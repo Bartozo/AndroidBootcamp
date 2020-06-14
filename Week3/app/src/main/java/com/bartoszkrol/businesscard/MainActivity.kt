@@ -50,6 +50,22 @@ class MainActivity : AppCompatActivity() {
         newQuoteButton.setOnClickListener { view ->
             newQuote()
         }
+
+        // Check if there is saved instance state
+        if (savedInstanceState != null) {
+            val quote = savedInstanceState.getString(QUOTE_KEY)
+
+            quoteTextView.text = quote
+        } else {
+            newQuote()
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        val quote = quoteTextView.text.toString()
+        outState.putString(QUOTE_KEY, quote)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
