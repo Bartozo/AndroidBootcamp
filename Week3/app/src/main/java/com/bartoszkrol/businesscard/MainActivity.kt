@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
-
+    
     private fun showVersion() {
         TODO("Not yet implemented")
     }
@@ -73,6 +74,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun newQuote() {
         TODO("Not yet implemented")
+    }
+
+    /**
+     * Create and show dialog
+     *
+     * @param title title of the dialog
+     * @param message message of the dialog
+     */
+    private fun showDialog(title: String, message: String) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(title)
+        builder.setMessage(message)
+        builder.create().show()
     }
 
 
