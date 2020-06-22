@@ -3,8 +3,13 @@ package com.bartoszkrol.mymovies
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Message
+import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_movies.*
+import java.lang.Exception
 
 class MoviesActivity : AppCompatActivity(), MovieListAdapter.MovieClickListener {
 
@@ -23,6 +28,30 @@ class MoviesActivity : AppCompatActivity(), MovieListAdapter.MovieClickListener 
         movies_recycler_view.adapter = MovieListAdapter(this)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.actionAbout ->  {
+                val title = getString(R.string.actionAbout)
+                val message = getString(R.string.aboutDialogMessage)
+                showDialog(title, message)
+            }
+            R.id.actionVersion -> {
+                val title = getString(R.string.actionVersion)
+                val versionName = BuildConfig.VERSION_NAME
+                showDialog(title, versionName)
+            }
+            else -> {
+                // Unknown value
+            }
+        }
+        return true
+    }
+
     /**
      * starts a new activity to show more details about the selected movie
      */
@@ -35,4 +64,19 @@ class MoviesActivity : AppCompatActivity(), MovieListAdapter.MovieClickListener 
         startActivity(intent)
     }
 
+    /**
+     * Create and show dialog
+     *
+     * @param title - title of the dialog
+     * @param message - message of the dialog
+     */
+    private fun showDialog(title: String, message: String) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(title)
+        builder.setMessage(message)
+        builder.setPositiveButton(R.string.positive_button_ok) { dialog, _ ->
+            dialog.dismiss()
+        }
+        builder.create().show()
+    }
 }
