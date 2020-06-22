@@ -25,6 +25,15 @@ class DetailActivity : AppCompatActivity() {
             movie_image_view.setImageResource(poster)
         }
 
+        // Add actionbar title and return button
+        val actionbar = supportActionBar
+        actionbar?.title =  title
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }
