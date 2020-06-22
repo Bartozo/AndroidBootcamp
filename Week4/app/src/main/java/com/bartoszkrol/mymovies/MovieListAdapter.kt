@@ -52,7 +52,7 @@ class MovieListAdapter(private val clickListener: MovieClickListener) : Recycler
     }
 
     override fun onBindViewHolder(holder: MovieListViewHolder, position: Int) {
-        holder.movieImageView.setImageResource(R.drawable.warcraft)
+        holder.movieImageView.setImageResource(movies[position].poster)
         holder.titleTextView.text = movies[position].title
         holder.itemView.setOnClickListener {
             clickListener.movieItemClicked(movies[position])
