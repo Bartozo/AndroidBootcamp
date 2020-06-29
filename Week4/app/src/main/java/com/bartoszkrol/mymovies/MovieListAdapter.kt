@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MovieListAdapter(private val clickListener: MovieClickListener) : RecyclerView.Adapter<MovieListViewHolder>() {
 
-    private val movies = arrayListOf<Movie>(
+    private val movies = arrayListOf(
         Movie(
             1,
             "23/04/2018",

@@ -3,13 +3,11 @@ package com.bartoszkrol.mymovies
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_movies.*
-import java.lang.Exception
 
 class MoviesActivity : AppCompatActivity(), MovieListAdapter.MovieClickListener {
 
