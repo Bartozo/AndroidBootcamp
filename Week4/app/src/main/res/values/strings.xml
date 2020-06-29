@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyMovies</string>
+    <string name="detail_image_description">This is a movie poster</string>
+    <string name="actionVersion">Version</string>
+    <string name="actionAbout">About the app</string>
+    <string name="aboutDialogMessage">
+        This app was created in kotlin for 4th week homework.
+        I hope that my mentor Fuad will check this string :)
+    </string>
+    <string name="positive_button_ok">OK!</string>
+</resources>
