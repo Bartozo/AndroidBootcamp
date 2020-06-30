@@ -11,5 +11,7 @@
     <string name="animal_photo">This is photo of an animal</string>
     <string name="animal_dialog_title">New animal!</string>
     <string name="animal_dialog_message">Add a new animal to your list!</string>
+    <string name="remove_all_animals">Remove all animals</string>
+    <string name="logout">Logout</string>
 
 </resources>
