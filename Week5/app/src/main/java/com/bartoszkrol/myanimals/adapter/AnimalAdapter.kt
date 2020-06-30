@@ -27,12 +27,11 @@ class AnimalAdapter() : RecyclerView.Adapter<AnimalViewHolder>() {
 
     override fun onBindViewHolder(holder: AnimalViewHolder, position: Int) {
         holder.name.text = animals[position].name
-        val type = animals[position].type
-        when (type) {
-            AnimalType.DOG -> println()
-            AnimalType.CAT -> println()
-            AnimalType.BIRD -> println()
-            AnimalType.Other -> println()
+        when (animals[position].type) {
+            AnimalType.DOG -> holder.photo.setImageResource(R.drawable.dog)
+            AnimalType.CAT -> holder.photo.setImageResource(R.drawable.cat)
+            AnimalType.BIRD -> holder.photo.setImageResource(R.drawable.bird)
+            AnimalType.Other -> holder.photo.setImageResource(R.drawable.other)
         }
     }
 
