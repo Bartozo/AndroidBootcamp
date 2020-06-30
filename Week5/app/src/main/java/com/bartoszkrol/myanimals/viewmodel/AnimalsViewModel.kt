@@ -13,7 +13,7 @@ class AnimalsViewModel(application: Application): AndroidViewModel(application) 
     fun insert(animal: Animal) = repository.addAnimal(animal)
 
     fun removeAnimal(animal: Animal) = repository.removeAnimal(animal)
-    
+
     fun removeAnimals() = repository.removeAllAnimals()
 
 }
