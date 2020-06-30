@@ -13,7 +13,7 @@ interface AnimalDao {
     fun insert(animal: Animal)
 
     @Delete
-    fun remove(animal: Animal)
+    fun removeAnimals(vararg animal: Animal)
 
     @Query("SELECT * FROM animal_table")
     fun getAllAnimals(): LiveData<List<Animal>>
