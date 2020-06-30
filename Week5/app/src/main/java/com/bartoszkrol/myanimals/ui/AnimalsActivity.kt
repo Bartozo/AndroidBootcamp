@@ -1,6 +1,9 @@
 package com.bartoszkrol.myanimals.ui
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -10,6 +13,7 @@ import com.bartoszkrol.myanimals.R
 import com.bartoszkrol.myanimals.adapter.AnimalAdapter
 import com.bartoszkrol.myanimals.model.Animal
 import com.bartoszkrol.myanimals.model.AnimalType
+import com.bartoszkrol.myanimals.model.LoginPrefs
 import com.bartoszkrol.myanimals.viewmodel.AnimalTypeViewModel
 import com.bartoszkrol.myanimals.viewmodel.AnimalsViewModel
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -40,6 +44,33 @@ class AnimalsActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.animal_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_logout -> logout()
+            R.id.action_remove_all -> removeAllAnimals()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    /**
+     * logout the user from the app and set isLoggedIn to false
+     */
+    private fun logout() {
+        LoginPrefs.setUserLoggedIn(false)
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    /**
+     * add an animal to the database
+     */
     private fun addAnimal() {
         val singleItems = arrayOf(AnimalType.DOG, AnimalType.CAT, AnimalType.BIRD, AnimalType.Other)
         val checkedItem = 0
@@ -64,6 +95,9 @@ class AnimalsActivity : AppCompatActivity() {
             .show()
     }
 
+    /**
+     * remove all animals from the database
+     */
     private fun removeAllAnimals() {
         animalsViewModel.removeAnimals()
     }
