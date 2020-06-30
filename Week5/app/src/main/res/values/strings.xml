@@ -7,5 +7,6 @@
     <string name="invalid_username">Invalid username. Username must be 1 to 10 characters long and can\'t have any whitespace</string>
     <string name="invalid_password">Invalid password. Password must contains at least 1 digit, 1 lower case letter, 1 upper case letter and must be 4–10 characters long</string>
     <string name="dialog_button_positive_text">OK</string>
+    <string name="animal_photo">This is photo of an animal</string>
 
 </resources>
