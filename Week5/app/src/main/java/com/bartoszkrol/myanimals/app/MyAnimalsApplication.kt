@@ -6,7 +6,6 @@ import android.os.AsyncTask
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.bartoszkrol.myanimals.model.AnimalDao
 import com.bartoszkrol.myanimals.model.AnimalDatabase
 import com.bartoszkrol.myanimals.model.AnimalType
 import com.bartoszkrol.myanimals.model.AnimalTypeDao
