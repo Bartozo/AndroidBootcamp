@@ -1,5 +1,6 @@
 package com.bartoszkrol.myanimals.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
@@ -29,12 +30,15 @@ class LoginActivity : AppCompatActivity() {
      */
     private fun isLoggedIn() {
         if (LoginPrefs.isLoggedIn()) {
+            val intent = Intent(this, AnimalsActivity::class.java)
+            startActivity(intent)
             finish()
         }
     }
 
     /**
      * check if the given username and password are correct
+     * if password and username are correct then start new activity
      */
     private fun checkUsernameAndPassword() {
         val username = usernameInputEditText.text.toString()
@@ -59,6 +63,9 @@ class LoginActivity : AppCompatActivity() {
                 }
                 .show()
         } else {
+            LoginPrefs.setUserLoggedIn(true)
+            val intent = Intent(this, AnimalsActivity::class.java)
+            startActivity(intent)
             finish()
         }
     }
