@@ -14,11 +14,11 @@ class User {
      * Check if username is valid
      *
      * no whitespace allowed (?=\\S+$)
-     * username can be 1 to 10 characters long {1,10}$
+     * username can be 1 to 10 characters long {1,10}
      * @return - returns true or false
      */
     fun isUsernameValid(): Boolean {
-        val usernamePattern = "^(?=\\\\S+\$){1,10}\$"
+        val usernamePattern = "(?=\\S+$).{1,10}"
         val matcher = Regex(usernamePattern)
 
         return matcher.find(username) != null
@@ -34,7 +34,7 @@ class User {
      * @return - returns true or false
      */
     fun isPasswordValid(): Boolean {
-        val passwordPattern = "^(?=.*[0-9])(?=.*[0-9])(?=.*[A-Z]){4,10}\$"
+        val passwordPattern = "^(?=.*[0-9])(?=.*[0-9])(?=.*[A-Z]).{4,10}"
         val matcher = Regex(passwordPattern)
 
         return matcher.find(password) != null
