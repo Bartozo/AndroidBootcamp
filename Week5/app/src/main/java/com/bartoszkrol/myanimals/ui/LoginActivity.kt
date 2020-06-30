@@ -1,7 +1,8 @@
-package com.bartoszkrol.myanimals
+package com.bartoszkrol.myanimals.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bartoszkrol.myanimals.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
