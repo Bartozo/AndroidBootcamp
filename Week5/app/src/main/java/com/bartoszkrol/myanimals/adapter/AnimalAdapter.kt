@@ -7,7 +7,7 @@ import com.bartoszkrol.myanimals.R
 import com.bartoszkrol.myanimals.model.Animal
 import com.bartoszkrol.myanimals.model.AnimalType
 
-class AnimalAdapter() : RecyclerView.Adapter<AnimalViewHolder>() {
+class AnimalAdapter : RecyclerView.Adapter<AnimalViewHolder>() {
 
     private val animals = mutableListOf<Animal>()
 

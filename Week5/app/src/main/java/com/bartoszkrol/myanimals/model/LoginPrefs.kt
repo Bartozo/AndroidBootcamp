@@ -1,7 +1,6 @@
 package com.bartoszkrol.myanimals.model
 
 import android.content.Context
-import androidx.preference.PreferenceManager
 import com.bartoszkrol.myanimals.app.MyAnimalsApplication
 
 object LoginPrefs {

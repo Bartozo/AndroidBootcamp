@@ -3,7 +3,6 @@ package com.bartoszkrol.myanimals.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
 import com.bartoszkrol.myanimals.R
 import com.bartoszkrol.myanimals.model.LoginPrefs
 import com.bartoszkrol.myanimals.model.User
