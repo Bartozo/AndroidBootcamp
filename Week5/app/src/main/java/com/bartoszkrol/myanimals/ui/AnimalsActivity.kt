@@ -39,7 +39,7 @@ class AnimalsActivity : AppCompatActivity() {
     }
 
     private fun addAnimal() {
-        animalsViewModel.insert(Animal("jnjh", AnimalType.CAT))
+        animalsViewModel.insert(Animal(name = "test",type = AnimalType.CAT))
     }
 
     private fun removeAllAnimals() {

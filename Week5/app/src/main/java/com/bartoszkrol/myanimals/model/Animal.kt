@@ -11,6 +11,6 @@ import java.util.*
     parentColumns = ["animalType"],
     childColumns = ["type"],
     onDelete = CASCADE))])
-data class Animal(@PrimaryKey val id: String = UUID.randomUUID().toString(),
+data class Animal(@PrimaryKey(autoGenerate = true) val id: Int = 0,
                   val name: String,
                   val type: String = AnimalType.Other)
