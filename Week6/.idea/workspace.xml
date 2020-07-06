@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bbf8f8-f6e1-400e-920c-89f3a20d9b3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/app/MyAnimalsApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/app/MyAnimalsApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalTypeDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalTypeDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/RoomRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/RoomRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/viewmodel/AnimalsViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/viewmodel/AnimalsViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/ui/AnimalsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/ui/AnimalsActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +130,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1018" height="439" key="GridCell.Tab.0.bottom" timestamp="1594034070398">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1018" height="439" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594034070398" />
+    <state width="1018" height="439" key="GridCell.Tab.0.center" timestamp="1594034070397">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1018" height="439" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594034070397" />
+    <state width="1018" height="439" key="GridCell.Tab.0.left" timestamp="1594034070397">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1018" height="439" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594034070397" />
+    <state width="1018" height="439" key="GridCell.Tab.0.right" timestamp="1594034070398">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1018" height="439" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594034070398" />
     <state x="857" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1594025460616">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

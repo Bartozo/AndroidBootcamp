@@ -7,7 +7,7 @@ import android.view.MenuItem
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bartoszkrol.myanimals.R
 import com.bartoszkrol.myanimals.adapter.AnimalAdapter
@@ -29,8 +29,8 @@ class AnimalsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animals)
 
-        animalsViewModel = ViewModelProviders.of(this).get(AnimalsViewModel::class.java)
-        animalTypeViewModel = ViewModelProviders.of(this).get(AnimalTypeViewModel::class.java)
+        animalsViewModel = ViewModelProvider(this).get(AnimalsViewModel::class.java)
+        animalTypeViewModel = ViewModelProvider(this).get(AnimalTypeViewModel::class.java)
 
         animals_recycler_view.layoutManager = LinearLayoutManager(this)
         animals_recycler_view.adapter = animalAdapter
