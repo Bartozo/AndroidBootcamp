@@ -10,7 +10,7 @@ import androidx.room.Query
 interface AnimalTypeDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insert(animalType: AnimalType)
+    suspend fun insert(animalType: AnimalType)
 
     @Query("SELECT * FROM animal_type_table ORDER BY animalType ASC")
     fun getAllAnimalTypes(): LiveData<List<AnimalType>>

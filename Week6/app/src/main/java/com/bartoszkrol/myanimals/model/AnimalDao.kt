@@ -10,10 +10,10 @@ import androidx.room.Query
 interface AnimalDao {
 
     @Insert
-    fun insert(animal: Animal)
+    suspend fun insert(animal: Animal)
 
     @Delete
-    fun removeAnimals(vararg animal: Animal)
+    suspend fun removeAnimals(vararg animal: Animal)
 
     @Query("SELECT * FROM animal_table")
     fun getAllAnimals(): LiveData<List<Animal>>
