@@ -9,7 +9,15 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58bbf8f8-f6e1-400e-920c-89f3a20d9b3e" name="Default Changelist" comment="" />
+    <list default="true" id="58bbf8f8-f6e1-400e-920c-89f3a20d9b3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,30 +181,30 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="815" y="423" key="AndroidCreateXmlResourceDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1594041938913" />
-    <state width="1271" height="237" key="GridCell.Tab.0.bottom" timestamp="1594043798199">
+    <state width="1271" height="237" key="GridCell.Tab.0.bottom" timestamp="1594044947813">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1271" height="237" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594043798199" />
-    <state width="1271" height="237" key="GridCell.Tab.0.center" timestamp="1594043798198">
+    <state width="1271" height="237" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1594044947813" />
+    <state width="1271" height="237" key="GridCell.Tab.0.center" timestamp="1594044947811">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1271" height="237" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594043798197" />
-    <state width="1271" height="237" key="GridCell.Tab.0.left" timestamp="1594043798197">
+    <state width="1271" height="237" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1594044947811" />
+    <state width="1271" height="237" key="GridCell.Tab.0.left" timestamp="1594044947811">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1271" height="237" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594043798197" />
-    <state width="1271" height="237" key="GridCell.Tab.0.right" timestamp="1594043798198">
+    <state width="1271" height="237" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1594044947811" />
+    <state width="1271" height="237" key="GridCell.Tab.0.right" timestamp="1594044947812">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1271" height="237" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594043798198" />
+    <state width="1271" height="237" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1594044947812" />
     <state x="857" y="304" key="com.intellij.ide.util.TipDialog" timestamp="1594025460616">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="857" y="304" key="com.intellij.ide.util.TipDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1594025460616" />
-    <state x="75" y="235" key="run.anything.popup" timestamp="1594031247237">
+    <state x="75" y="235" key="run.anything.popup" timestamp="1594045208903">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="75" y="235" key="run.anything.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1594031247237" />
+    <state x="75" y="235" key="run.anything.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1594045208903" />
     <state x="285" y="380" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1594030973848">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
