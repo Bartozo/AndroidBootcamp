@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58bbf8f8-f6e1-400e-920c-89f3a20d9b3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/app/MyAnimalsApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/app/MyAnimalsApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalDao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/bartoszkrol/myanimals/model/AnimalDatabase.kt" afterDir="false" />

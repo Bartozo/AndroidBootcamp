@@ -9,6 +9,10 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.bartoszkrol.myanimals.model.AnimalDatabase
 import com.bartoszkrol.myanimals.model.AnimalType
 import com.bartoszkrol.myanimals.model.AnimalTypeDao
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 class MyAnimalsApplication : Application() {
 
@@ -25,20 +29,19 @@ class MyAnimalsApplication : Application() {
         super.onCreate()
 
         database = Room.databaseBuilder(this, AnimalDatabase::class.java, "animal_database")
-            .addCallback(roomDatabaseCallback).build()
+            .addCallback(AnimalDatabaseCallback(GlobalScope)).build()
     }
 
-    private val roomDatabaseCallback = object : RoomDatabase.Callback() {
-        override fun onOpen(db: SupportSQLiteDatabase) {
-            super.onOpen(db)
-            PopulareDbAsync(database).execute()
+    private class AnimalDatabaseCallback(private val scope: CoroutineScope) : RoomDatabase.Callback() {
+        override fun onCreate(db: SupportSQLiteDatabase) {
+            super.onCreate(db)
+            scope.launch {
+                val animalTypeDao = database.animalTypeDao()
+                populateDb(animalTypeDao)
+            }
         }
-    }
 
-    private class PopulareDbAsync(db: AnimalDatabase) : AsyncTask<Void, Void, Void>() {
-        private val animalTypeDao: AnimalTypeDao = db.animalTypeDao()
-
-        override fun doInBackground(vararg params: Void): Void? {
+        private suspend fun populateDb(animalTypeDao: AnimalTypeDao) {
             var animalType = AnimalType(AnimalType.DOG)
             animalTypeDao.insert(animalType)
 
@@ -50,9 +53,8 @@ class MyAnimalsApplication : Application() {
 
             animalType = AnimalType(AnimalType.Other)
             animalTypeDao.insert(animalType)
-
-            return null
         }
+
     }
 
 }
