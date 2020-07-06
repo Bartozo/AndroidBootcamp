@@ -26,6 +26,11 @@ class RoomRepository : AnimalRepository {
     override fun getAnimals(): LiveData<List<Animal>> = allAnimals
 
     /**
+     * return animal from the database
+     */
+    override fun getAnimal(id: Int): LiveData<Animal> = animalDao.getAnimal(id)
+
+    /**
      * remove animal from the database (using Coroutines)
      */
     override suspend fun removeAnimal(animal: Animal) {
@@ -40,6 +45,13 @@ class RoomRepository : AnimalRepository {
         if (animalArray != null) {
             animalDao.removeAnimals(*animalArray)
         }
+    }
+
+    /**
+     * update animal in the database (using Coroutines)
+     */
+    override suspend fun updateAnimal(animal: Animal) {
+        animalDao.updateAnimal(animal)
     }
 
 }

@@ -1,10 +1,7 @@
 package com.bartoszkrol.myanimals.model
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface AnimalDao {
@@ -15,6 +12,13 @@ interface AnimalDao {
     @Delete
     suspend fun removeAnimals(vararg animal: Animal)
 
+    @Update
+    suspend fun updateAnimal(animal: Animal)
+
     @Query("SELECT * FROM animal_table")
     fun getAllAnimals(): LiveData<List<Animal>>
+
+    @Query("SELECT * FROM animal_table WHERE id = :id")
+    fun getAnimal(id: Int): LiveData<Animal>
+
 }
