@@ -14,10 +14,10 @@ class RoomRepository : AnimalRepository {
     }
 
     /**
-     * add animal to the database (ASYNC)
+     * add animal to the database (using Coroutines)
      */
-    override fun addAnimal(animal: Animal) {
-        InsertAsyncTask(animalDao).execute(animal)
+    override suspend fun addAnimal(animal: Animal) {
+        animalDao.insert(animal)
     }
 
     /**
@@ -26,34 +26,19 @@ class RoomRepository : AnimalRepository {
     override fun getAnimals(): LiveData<List<Animal>> = allAnimals
 
     /**
-     * remove animal from the database (ASYNC)
+     * remove animal from the database (using Coroutines)
      */
-    override fun removeAnimal(animal: Animal) {
-        DeleteAsyncTask(animalDao).execute(animal)
+    override suspend fun removeAnimal(animal: Animal) {
+        animalDao.removeAnimals(animal)
     }
 
     /**
-     * remove all animals from the database (ASYNC)
+     * remove all animals from the database (using Coroutines)
      */
-    override fun removeAllAnimals() {
+    override suspend fun removeAllAnimals() {
         val animalArray = allAnimals.value?.toTypedArray()
         if (animalArray != null) {
-            DeleteAsyncTask(animalDao).execute(*animalArray)
-        }
-    }
-
-
-    private class InsertAsyncTask internal constructor(private val dao: AnimalDao) : AsyncTask<Animal, Void, Void>() {
-        override fun doInBackground(vararg params: Animal): Void? {
-            dao.insert(params[0])
-            return null
-        }
-    }
-
-    private class DeleteAsyncTask internal constructor(private val dao: AnimalDao) : AsyncTask<Animal, Void, Void>() {
-        override fun doInBackground(vararg params: Animal): Void? {
-            dao.removeAnimals(*params)
-            return null
+            animalDao.removeAnimals(*animalArray)
         }
     }
 
