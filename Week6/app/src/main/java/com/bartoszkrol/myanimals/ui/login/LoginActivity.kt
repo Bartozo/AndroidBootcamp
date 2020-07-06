@@ -1,4 +1,4 @@
-package com.bartoszkrol.myanimals.ui
+package com.bartoszkrol.myanimals.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.bartoszkrol.myanimals.R
 import com.bartoszkrol.myanimals.model.LoginPrefs
 import com.bartoszkrol.myanimals.model.User
+import com.bartoszkrol.myanimals.ui.AnimalsActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_login.*
 
