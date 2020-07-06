@@ -5,4 +5,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="StarCheckbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/ic_round_star_border_24</item>
+    </style>
+
+    <style name="AppTheme.Fragment" >
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
 </resources>
