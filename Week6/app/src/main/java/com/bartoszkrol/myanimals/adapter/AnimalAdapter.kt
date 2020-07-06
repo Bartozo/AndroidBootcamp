@@ -7,9 +7,13 @@ import com.bartoszkrol.myanimals.R
 import com.bartoszkrol.myanimals.model.Animal
 import com.bartoszkrol.myanimals.model.AnimalType
 
-class AnimalAdapter : RecyclerView.Adapter<AnimalViewHolder>() {
+class AnimalAdapter(private val clickListener: AnimalClickListener) : RecyclerView.Adapter<AnimalViewHolder>() {
 
     private val animals = mutableListOf<Animal>()
+
+    interface AnimalClickListener {
+        fun animalItemClicked(animal: Animal)
+    }
 
     fun setAnimals(animals: List<Animal>) {
         this.animals.clear()
@@ -32,6 +36,9 @@ class AnimalAdapter : RecyclerView.Adapter<AnimalViewHolder>() {
             AnimalType.CAT -> holder.photo.setImageResource(R.drawable.cat)
             AnimalType.BIRD -> holder.photo.setImageResource(R.drawable.bird)
             AnimalType.Other -> holder.photo.setImageResource(R.drawable.other)
+        }
+        holder.itemView.setOnClickListener {
+            clickListener.animalItemClicked(animals[position])
         }
     }
 
