@@ -12,6 +12,8 @@ class AnimalsViewModel(application: Application) : AndroidViewModel(application)
 
     fun getAnimals() = repository.getAnimals()
 
+    fun getAnimal(id: Int) = repository.getAnimal(id)
+
     fun insert(animal: Animal) = viewModelScope.launch {
         repository.addAnimal(animal)
     }
@@ -22,6 +24,10 @@ class AnimalsViewModel(application: Application) : AndroidViewModel(application)
 
     fun removeAnimals() = viewModelScope.launch {
         repository.removeAllAnimals()
+    }
+
+    fun updateAnimal(animal: Animal) = viewModelScope.launch {
+        repository.updateAnimal(animal)
     }
 
 }
