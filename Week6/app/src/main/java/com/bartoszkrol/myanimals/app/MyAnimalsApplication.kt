@@ -2,7 +2,6 @@ package com.bartoszkrol.myanimals.app
 
 import android.app.Application
 import android.content.Context
-import android.os.AsyncTask
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
@@ -11,7 +10,6 @@ import com.bartoszkrol.myanimals.model.AnimalType
 import com.bartoszkrol.myanimals.model.AnimalTypeDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 class MyAnimalsApplication : Application() {

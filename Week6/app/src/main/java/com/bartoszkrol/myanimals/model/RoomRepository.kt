@@ -1,6 +1,5 @@
 package com.bartoszkrol.myanimals.model
 
-import android.os.AsyncTask
 import androidx.lifecycle.LiveData
 import com.bartoszkrol.myanimals.app.MyAnimalsApplication
 
