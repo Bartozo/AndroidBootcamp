@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,16 +15,19 @@ import com.bartoszkrol.myanimals.adapter.AnimalAdapter
 import com.bartoszkrol.myanimals.model.Animal
 import com.bartoszkrol.myanimals.model.AnimalType
 import com.bartoszkrol.myanimals.model.LoginPrefs
+import com.bartoszkrol.myanimals.ui.details.AnimalDetailsFragment
+import com.bartoszkrol.myanimals.ui.login.LoginActivity
 import com.bartoszkrol.myanimals.viewmodel.AnimalTypeViewModel
 import com.bartoszkrol.myanimals.viewmodel.AnimalsViewModel
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_animals.*
 
-class AnimalsActivity : AppCompatActivity() {
+
+class AnimalsActivity : AppCompatActivity(), AnimalAdapter.AnimalClickListener {
 
     private lateinit var animalsViewModel: AnimalsViewModel
     private lateinit var animalTypeViewModel: AnimalTypeViewModel
-    private val animalAdapter = AnimalAdapter()
+    private val animalAdapter = AnimalAdapter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,17 +80,30 @@ class AnimalsActivity : AppCompatActivity() {
         val checkedItem = 0
         var selectedType = AnimalType.DOG
 
-        val editText = EditText(this)
-        editText.maxLines = 1 // more lines = buttons will be under the screen
+        // Create layout for dialog
+        val layout = LinearLayout(this)
+        layout.orientation = LinearLayout.VERTICAL
 
+        val nameEditText = EditText(this)
+        nameEditText.hint = "Animal name..."
+        nameEditText.maxLines = 1
+        layout.addView(nameEditText)
+
+        val descriptionEditText = EditText(this)
+        descriptionEditText.hint = "description..."
+        descriptionEditText.maxLines = 1
+        layout.addView(descriptionEditText)
+
+        // Build and show dialog
         MaterialAlertDialogBuilder(this)
             .setTitle(resources.getString(R.string.animal_dialog_title))
-            .setView(editText)
+            .setView(layout)
             .setNeutralButton(resources.getString(R.string.dialog_button_neutral_text)) { dialog, _ ->
                 dialog.dismiss()
             }
             .setPositiveButton(resources.getString(R.string.dialog_button_positive_text)) { dialog, _ ->
-                animalsViewModel.insert(Animal(name = editText.text.toString(),type = selectedType))
+                animalsViewModel.insert(Animal(name = nameEditText.text.toString(),
+                    type = selectedType, description = descriptionEditText.text.toString()))
                 dialog.dismiss()
             }
             .setSingleChoiceItems(singleItems, checkedItem) { _, which ->
@@ -100,5 +117,13 @@ class AnimalsActivity : AppCompatActivity() {
      */
     private fun removeAllAnimals() {
         animalsViewModel.removeAnimals()
+    }
+
+    /**
+     * start new screen with selected animal
+     */
+    override fun animalItemClicked(animal: Animal) {
+        val fragment = AnimalDetailsFragment.newInstance(animal)
+        fragment.show(supportFragmentManager, AnimalDetailsFragment.ANIMAL_DETAILS_FRAGMENT_TAG)
     }
 }
