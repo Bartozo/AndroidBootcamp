@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyAnimals</string>
+    <string name="username_hint">Username…</string>
+    <string name="password_hint">Password…</string>
+    <string name="login_button_text">Login</string>
+    <string name="warning">Ups..</string>
+    <string name="invalid_username">Invalid username. Username must be 1 to 10 characters long and can\'t have any whitespace</string>
+    <string name="invalid_password">Invalid password. Password must contains at least 1 digit, 1 lower case letter, 1 upper case letter and must be 4–10 characters long</string>
+    <string name="dialog_button_positive_text">OK</string>
+    <string name="dialog_button_neutral_text">cancel</string>
+    <string name="animal_photo">This is photo of an animal</string>
+    <string name="animal_dialog_title">New animal!</string>
+    <string name="animal_dialog_message">Add a new animal to your list!</string>
+    <string name="remove_all_animals">Remove all animals</string>
+    <string name="logout">Logout</string>
+
+</resources>
