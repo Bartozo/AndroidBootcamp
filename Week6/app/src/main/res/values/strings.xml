@@ -13,5 +13,8 @@
     <string name="animal_dialog_message">Add a new animal to your list!</string>
     <string name="remove_all_animals">Remove all animals</string>
     <string name="logout">Logout</string>
+    <string name="animal_details">Details</string>
+    <string name="favorite_animal">Favorite Animal</string>
+    <string name="Delete">Delete</string>
 
 </resources>
