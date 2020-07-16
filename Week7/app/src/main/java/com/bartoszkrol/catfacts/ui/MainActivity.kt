@@ -1,9 +1,11 @@
-package com.bartoszkrol.catfacts
+package com.bartoszkrol.catfacts.ui
 
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bartoszkrol.catfacts.model.Failure
+import com.bartoszkrol.catfacts.App
+import com.bartoszkrol.catfacts.R
+import com.bartoszkrol.catfacts.model.CatFact
 import com.bartoszkrol.catfacts.model.Success
 import com.bartoszkrol.catfacts.networking.NetworkStatusChecker
 import kotlinx.coroutines.Dispatchers
@@ -21,21 +23,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        getAllCatFacts()
+    }
 
+    private fun getAllCatFacts() {
         networkStatusChecker.performIfConnectedToInternet {
             GlobalScope.launch(Dispatchers.Main) {
                 val result = remoteApi.getCatFacts()
 
                 if (result is Success) {
-                    println(result.data)
-                    println("dziala")
+                    onGetCatFactsSuccess(result.data)
                 } else {
-                    if (result is Failure) {
-                        result.error?.printStackTrace()
-                    }
-                    println("not working  - error")
+                    onGetCatFactsFailed()
                 }
             }
         }
     }
+
+    private fun onGetCatFactsSuccess(catFacts: List<CatFact>) {
+
+    }
+
+    private fun onGetCatFactsFailed() {
+
+    }
+
 }
