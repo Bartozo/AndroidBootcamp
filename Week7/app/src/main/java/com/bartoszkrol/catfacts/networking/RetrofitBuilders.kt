@@ -21,7 +21,7 @@ fun buildRetrofit(): Retrofit {
     return Retrofit.Builder()
         .client(buildClient())
         .baseUrl(BASE_URL)
-        .addConverterFactory(Json.asConverterFactory(contentType))
+        .addConverterFactory(Json.nonstrict.asConverterFactory(contentType))
         .build()
 }
 

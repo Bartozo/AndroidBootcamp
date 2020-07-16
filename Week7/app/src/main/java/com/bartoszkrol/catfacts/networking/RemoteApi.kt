@@ -1,8 +1,5 @@
 package com.bartoszkrol.catfacts.networking
-import com.bartoszkrol.catfacts.model.CatFact
-import com.bartoszkrol.catfacts.model.Failure
-import com.bartoszkrol.catfacts.model.Result
-import com.bartoszkrol.catfacts.model.Success
+import com.bartoszkrol.catfacts.model.*
 import java.lang.NullPointerException
 
 /**

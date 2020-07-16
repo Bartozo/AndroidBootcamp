@@ -10,6 +10,6 @@ data class CatFact(
     val _id: String,
     val text: String,
     val type: String,
-    val user: User,
+//    val user: User,
     val upvotes: Int
 )

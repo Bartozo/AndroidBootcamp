@@ -25,9 +25,14 @@ class MainActivity : AppCompatActivity() {
         networkStatusChecker.performIfConnectedToInternet {
             GlobalScope.launch(Dispatchers.Main) {
                 val result = remoteApi.getCatFacts()
+
                 if (result is Success) {
                     println(result.data)
+                    println("dziala")
                 } else {
+                    if (result is Failure) {
+                        result.error?.printStackTrace()
+                    }
                     println("not working  - error")
                 }
             }
