@@ -61,4 +61,8 @@ dependencies {
     // Room db
     implementation 'androidx.room:room-ktx:2.2.5'
     kapt "androidx.room:room-compiler:2.2.5"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
 }
