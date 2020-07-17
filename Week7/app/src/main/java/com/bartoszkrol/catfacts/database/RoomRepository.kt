@@ -1,7 +1,6 @@
 package com.bartoszkrol.catfacts.database
 
 import androidx.lifecycle.LiveData
-import com.bartoszkrol.catfacts.App
 import com.bartoszkrol.catfacts.model.CatFact
 
 class RoomRepository(private val catFactsDao: CatFactsDao) : CatFactsRepository {

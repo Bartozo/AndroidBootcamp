@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bartoszkrol.catfacts.R
 import com.bartoszkrol.catfacts.model.CatFact
 import com.bumptech.glide.Glide
-import com.bumptech.glide.annotation.GlideModule
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import kotlinx.android.synthetic.main.catfact_list_item.view.*
 
 class CatFactHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

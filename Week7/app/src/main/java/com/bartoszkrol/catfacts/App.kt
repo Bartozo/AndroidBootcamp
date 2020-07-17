@@ -1,11 +1,6 @@
 package com.bartoszkrol.catfacts
 
 import android.app.Application
-import android.content.Context
-import androidx.room.Room
-import com.bartoszkrol.catfacts.database.CatFactsDatabase
-import com.bartoszkrol.catfacts.database.CatFactsRepository
-import com.bartoszkrol.catfacts.database.RoomRepository
 import com.bartoszkrol.catfacts.networking.RemoteApi
 import com.bartoszkrol.catfacts.networking.buildApiService
 

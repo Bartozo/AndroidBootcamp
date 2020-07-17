@@ -5,18 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bartoszkrol.catfacts.App
 import com.bartoszkrol.catfacts.R
 import com.bartoszkrol.catfacts.model.CatFact
-import com.bartoszkrol.catfacts.model.Failure
 import com.bartoszkrol.catfacts.model.Success
 import com.bartoszkrol.catfacts.networking.NetworkStatusChecker
+import com.bartoszkrol.catfacts.utils.snack
 import com.bartoszkrol.catfacts.viewmodel.CatFactsViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +33,9 @@ class MainActivity : AppCompatActivity() {
         catFactsViewModel = ViewModelProvider(this).get(CatFactsViewModel::class.java)
 
         catFactsRecyclerView.layoutManager = LinearLayoutManager(this)
+        catFactsRecyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
         catFactsRecyclerView.adapter = catFactAdapter
+
 
         catFactsViewModel.getCatFacts().observe(this, Observer<List<CatFact>> { catFacts ->
             catFactAdapter.setCatFacts(catFacts ?: emptyList())
@@ -43,29 +44,39 @@ class MainActivity : AppCompatActivity() {
         getAllCatFacts()
     }
 
+    /**
+     * Download data from the API
+     */
     private fun getAllCatFacts() {
-        networkStatusChecker.performIfConnectedToInternet {
-            GlobalScope.launch(Dispatchers.Main) {
+        networkStatusChecker.performIfConnectedToInternet( {
+            CoroutineScope(Dispatchers.IO).launch {
                 val result = remoteApi.getCatFacts()
 
-                if (result is Success) {
-                    onGetCatFactsSuccess(result.data)
-                } else {
-                    if (result is Failure) {
-                        result.error?.printStackTrace()
+                withContext(Dispatchers.Main) {
+                    if (result is Success) {
+                        onGetCatFactsSuccess(result.data)
+                    } else {
+                        onGetCatFactsFailed()
                     }
-                    onGetCatFactsFailed()
                 }
             }
-        }
+        }, {
+            catFactsRecyclerView.snack(getString(R.string.error_no_internet_problem))
+        })
     }
 
+    /**
+     * Add new data to the database
+     */
     private fun onGetCatFactsSuccess(catFacts: List<CatFact>) {
         catFactsViewModel.insertCatFacts(catFacts)
     }
 
+    /**
+     * Shows downloading error
+     */
     private fun onGetCatFactsFailed() {
-        println("failed to download data")
+        catFactsRecyclerView.snack(getString(R.string.error_server_problem))
     }
 
 }
