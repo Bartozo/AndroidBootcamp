@@ -1,5 +1,6 @@
 package com.bartoszkrol.catfacts.model
 
+import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.serialization.Serializable
@@ -12,6 +13,6 @@ import kotlinx.serialization.Serializable
 data class CatFact(
     @PrimaryKey(autoGenerate = false) val _id: String,
     val text: String,
-    val user: User? = null, // some of the values from the API has a null value for the user
+    @Embedded val user: User? = null,
     val upvotes: Int
 )

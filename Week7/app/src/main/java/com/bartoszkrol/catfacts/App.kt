@@ -17,23 +17,11 @@ class App : Application() {
         private val apiService by lazy { buildApiService() }
 
         val remoteApi by lazy { RemoteApi(apiService) }
-
-        lateinit var database: CatFactsDatabase
-
-        fun getAppContext(): Context = instance.applicationContext
-
-        fun provideCatFactsRepository(): CatFactsRepository = RoomRepository()
     }
 
     override fun onCreate() {
         super.onCreate()
         instance = this
-
-        database = Room.databaseBuilder(
-            this,
-            CatFactsDatabase::class.java,
-            "catfacts_database")
-            .build()
     }
 
 }

@@ -4,14 +4,9 @@ import androidx.lifecycle.LiveData
 import com.bartoszkrol.catfacts.App
 import com.bartoszkrol.catfacts.model.CatFact
 
-class RoomRepository  : CatFactsRepository {
+class RoomRepository(private val catFactsDao: CatFactsDao) : CatFactsRepository {
 
-    private val catFactsDao: CatFactsDao = App.database.catFactsDao()
-    private val allCatFacts: LiveData<List<CatFact>>
-
-    init {
-        allCatFacts = catFactsDao.getAllCatFacts()
-    }
+    private val allCatFacts: LiveData<List<CatFact>> = catFactsDao.getAllCatFacts()
 
     /**
      * Remove all catFacts from the database
