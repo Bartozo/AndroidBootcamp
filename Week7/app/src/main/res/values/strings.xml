@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CatFacts</string>
+    <string name="avatar_description">Image of the user avatar</string>
+    <string name="user_textView_text">%1$s %2$s</string>
 </resources>
