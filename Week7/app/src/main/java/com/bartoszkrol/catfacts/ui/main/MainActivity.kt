@@ -36,9 +36,9 @@ class MainActivity : AppCompatActivity() {
         catFactsRecyclerView.layoutManager = LinearLayoutManager(this)
         catFactsRecyclerView.adapter = catFactAdapter
 
-//        catFactsViewModel.getCatFacts().observe(this, Observer<List<CatFact>> { catFacts ->
-//            catFactAdapter.setCatFacts(catFacts ?: emptyList())
-//        })
+        catFactsViewModel.getCatFacts().observe(this, Observer<List<CatFact>> { catFacts ->
+            catFactAdapter.setCatFacts(catFacts ?: emptyList())
+        })
 
         getAllCatFacts()
     }
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onGetCatFactsSuccess(catFacts: List<CatFact>) {
-//        catFactsViewModel.insertCatFacts(catFacts)
+        catFactsViewModel.insertCatFacts(catFacts)
     }
 
     private fun onGetCatFactsFailed() {
