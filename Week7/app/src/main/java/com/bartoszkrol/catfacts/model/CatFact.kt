@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
 data class CatFact(
     val _id: String,
     val text: String,
-    val type: String,
-    val user: User,
+//    val type: String,
+    val user: User? = null, // some of the values from the API has a null value for the user
     val upvotes: Int
 )

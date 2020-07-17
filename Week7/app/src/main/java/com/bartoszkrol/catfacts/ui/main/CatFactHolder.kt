@@ -13,8 +13,8 @@ class CatFactHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         itemView.catFactTextView.text = catFact.text
         itemView.userTextView.text = itemView.resources.getString(
             R.string.user_textView_text,
-            catFact.user.name.first,
-            catFact.user.name.last)
+            catFact.user?.name?.first,
+            catFact.user?.name?.last)
         itemView.votesTextView.text = catFact.upvotes.toString()
 //        itemView.userImageView
     }

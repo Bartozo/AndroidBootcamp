@@ -10,9 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58bbf8f8-f6e1-400e-920c-89f3a20d9b3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week7/app/src/main/java/com/bartoszkrol/catfacts/model/CatFact.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Week7/app/src/main/java/com/bartoszkrol/catfacts/model/CatFact.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week7/app/src/main/java/com/bartoszkrol/catfacts/ui/main/CatFactHolder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Week7/app/src/main/java/com/bartoszkrol/catfacts/ui/main/CatFactHolder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week7/app/src/main/java/com/bartoszkrol/catfacts/ui/main/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Week7/app/src/main/java/com/bartoszkrol/catfacts/ui/main/MainActivity.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

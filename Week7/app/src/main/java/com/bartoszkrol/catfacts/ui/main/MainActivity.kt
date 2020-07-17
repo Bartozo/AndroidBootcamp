@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bartoszkrol.catfacts.App
 import com.bartoszkrol.catfacts.R
 import com.bartoszkrol.catfacts.model.CatFact
+import com.bartoszkrol.catfacts.model.Failure
 import com.bartoszkrol.catfacts.model.Success
 import com.bartoszkrol.catfacts.networking.NetworkStatusChecker
 import kotlinx.android.synthetic.main.activity_main.*
@@ -40,6 +41,9 @@ class MainActivity : AppCompatActivity() {
                 if (result is Success) {
                     onGetCatFactsSuccess(result.data)
                 } else {
+                    if (result is Failure) {
+                        result.error?.printStackTrace()
+                    }
                     onGetCatFactsFailed()
                 }
             }
