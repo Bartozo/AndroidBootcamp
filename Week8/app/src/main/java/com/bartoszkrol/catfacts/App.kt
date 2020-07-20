@@ -1,8 +1,12 @@
 package com.bartoszkrol.catfacts
 
 import android.app.Application
+import androidx.work.*
 import com.bartoszkrol.catfacts.networking.RemoteApi
 import com.bartoszkrol.catfacts.networking.buildApiService
+import com.bartoszkrol.catfacts.worker.DownloadDataWorker
+import java.util.concurrent.TimeUnit
+
 
 class App : Application() {
 
@@ -17,6 +21,31 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+
+        startDownloadingDataWorker()
+    }
+
+    /**
+     * Starts a worker that downloads a data from the API server every 1 hour.
+     * This is a unique worker, so there will be only 1 instance of it.
+     */
+    private fun startDownloadingDataWorker() {
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.CONNECTED)
+            .setRequiresBatteryNotLow(true)
+            .setRequiresStorageNotLow(true)
+            .build()
+
+        val work = PeriodicWorkRequestBuilder<DownloadDataWorker>(1, TimeUnit.MINUTES)
+            .setConstraints(constraints)
+            .build()
+
+        val workManager = WorkManager.getInstance(this)
+        workManager.enqueueUniquePeriodicWork(
+            DownloadDataWorker.DOWNLOAD_DATA_WORKER,
+            ExistingPeriodicWorkPolicy.KEEP,
+            work
+        )
     }
 
 }

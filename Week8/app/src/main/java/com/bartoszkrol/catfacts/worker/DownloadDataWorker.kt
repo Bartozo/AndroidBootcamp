@@ -12,6 +12,10 @@ class DownloadDataWorker(context: Context, params: WorkerParameters) : Coroutine
 
     private val remoteApi = App.remoteApi
 
+    companion object {
+        const val DOWNLOAD_DATA_WORKER = "DOWNLOAD_DATA_WORKER"
+    }
+
     override suspend fun doWork(): Result {
         val result = remoteApi.getCatFacts()
 
