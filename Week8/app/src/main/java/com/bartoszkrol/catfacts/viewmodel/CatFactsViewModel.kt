@@ -5,7 +5,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.bartoszkrol.catfacts.database.CatFactsDatabase
-import com.bartoszkrol.catfacts.database.CatFactsRepository
 import com.bartoszkrol.catfacts.database.RoomRepository
 import com.bartoszkrol.catfacts.model.CatFact
 import kotlinx.coroutines.launch
