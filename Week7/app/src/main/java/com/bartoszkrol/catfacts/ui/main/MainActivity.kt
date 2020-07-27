@@ -14,6 +14,7 @@ import com.bartoszkrol.catfacts.model.Success
 import com.bartoszkrol.catfacts.networking.NetworkStatusChecker
 import com.bartoszkrol.catfacts.utils.snack
 import com.bartoszkrol.catfacts.viewmodel.CatFactsViewModel
+import com.bartoszkrol.catfacts.viewmodel.CatFactsViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 
@@ -24,13 +25,15 @@ class MainActivity : AppCompatActivity() {
         NetworkStatusChecker(getSystemService(ConnectivityManager::class.java))
     }
     private val catFactAdapter = CatFactAdapter()
-    private lateinit var catFactsViewModel: CatFactsViewModel
+    private val catFactsViewModel: CatFactsViewModel by lazy {
+        ViewModelProvider(this, CatFactsViewModelFactory(App.getAppContext(), App.repository))
+            .get(CatFactsViewModel::class.java)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        catFactsViewModel = ViewModelProvider(this).get(CatFactsViewModel::class.java)
 
         catFactsRecyclerView.layoutManager = LinearLayoutManager(this)
         catFactsRecyclerView.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
