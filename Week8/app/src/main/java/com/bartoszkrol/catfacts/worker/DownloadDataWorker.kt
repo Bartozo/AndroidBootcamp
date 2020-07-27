@@ -22,9 +22,7 @@ class DownloadDataWorker(context: Context, params: WorkerParameters) : Coroutine
         if (result is Success) {
             // Add new data to the database
             // LiveData will update recyclerView with a new facts about the cats
-            val catFactsDao = CatFactsDatabase.getDatabase(applicationContext).catFactsDao()
-            val repository = RoomRepository(catFactsDao)
-            repository.insertCatFacts(result.data)
+            App.repository.insertCatFacts(result.data)
 
             return Result.success()
         } else {

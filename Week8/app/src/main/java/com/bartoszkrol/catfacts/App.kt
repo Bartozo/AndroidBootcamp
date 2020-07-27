@@ -49,7 +49,7 @@ class App : Application() {
             .setRequiresStorageNotLow(true)
             .build()
 
-        val work = PeriodicWorkRequestBuilder<DownloadDataWorker>(1, TimeUnit.MINUTES)
+        val work = PeriodicWorkRequestBuilder<DownloadDataWorker>(1, TimeUnit.HOURS)
             .setConstraints(constraints)
             .build()
 
