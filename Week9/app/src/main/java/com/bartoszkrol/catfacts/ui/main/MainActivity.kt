@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     }
     private val catFactAdapter = CatFactAdapter()
     private val catFactsViewModel: CatFactsViewModel by lazy {
-        ViewModelProvider(this, CatFactsViewModelFactory(App.getAppContext(), App.repository))
+        ViewModelProvider(this, CatFactsViewModelFactory(App.repository))
             .get(CatFactsViewModel::class.java)
     }
 
