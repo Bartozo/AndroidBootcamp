@@ -3,8 +3,6 @@ package com.bartoszkrol.catfacts.worker
 import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.bartoszkrol.catfacts.App
-import com.bartoszkrol.catfacts.database.CatFactsDatabase
 import com.bartoszkrol.catfacts.database.RoomRepository
 import com.bartoszkrol.catfacts.model.Success
 import com.bartoszkrol.catfacts.networking.RemoteApi

@@ -2,10 +2,9 @@ package com.bartoszkrol.catfacts
 
 import android.app.Application
 import androidx.work.*
-import com.bartoszkrol.catfacts.database.CatFactsDatabase
-import com.bartoszkrol.catfacts.database.RoomRepository
 import com.bartoszkrol.catfacts.di.networkModule
 import com.bartoszkrol.catfacts.di.repositoryModule
+import com.bartoszkrol.catfacts.di.viewModelModule
 import com.bartoszkrol.catfacts.worker.DownloadDataWorker
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -57,7 +56,7 @@ class App : Application() {
     private fun startKoinModules() {
         startKoin {
             androidContext(this@App)
-            modules(listOf(networkModule, repositoryModule))
+            modules(listOf(networkModule, repositoryModule, viewModelModule))
         }
     }
 

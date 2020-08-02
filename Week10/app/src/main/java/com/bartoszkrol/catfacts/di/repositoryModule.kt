@@ -3,7 +3,6 @@ package com.bartoszkrol.catfacts.di
 import androidx.room.Room
 import com.bartoszkrol.catfacts.database.CatFactsDatabase
 import com.bartoszkrol.catfacts.database.RoomRepository
-import com.bartoszkrol.catfacts.viewmodel.CatFactsViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
