@@ -7,10 +7,13 @@ import com.bartoszkrol.catfacts.App
 import com.bartoszkrol.catfacts.database.CatFactsDatabase
 import com.bartoszkrol.catfacts.database.RoomRepository
 import com.bartoszkrol.catfacts.model.Success
+import com.bartoszkrol.catfacts.networking.RemoteApi
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 
-class DownloadDataWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
+class DownloadDataWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params), KoinComponent {
 
-    private val remoteApi = App.remoteApi
+    private val remoteApi: RemoteApi by inject()
 
     companion object {
         const val DOWNLOAD_DATA_WORKER = "DOWNLOAD_DATA_WORKER"

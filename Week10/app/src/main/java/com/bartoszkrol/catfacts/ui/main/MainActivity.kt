@@ -12,17 +12,19 @@ import com.bartoszkrol.catfacts.model.CatFact
 import com.bartoszkrol.catfacts.model.Failure
 import com.bartoszkrol.catfacts.model.Success
 import com.bartoszkrol.catfacts.networking.NetworkStatusChecker
+import com.bartoszkrol.catfacts.networking.RemoteApi
 import com.bartoszkrol.catfacts.viewmodel.CatFactsViewModel
 import com.bartoszkrol.catfacts.viewmodel.CatFactsViewModelFactory
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import org.koin.android.ext.android.inject
 
 
 class MainActivity : AppCompatActivity() {
 
-    private val remoteApi = App.remoteApi
+    private val remoteApi: RemoteApi by inject()
     private val networkStatusChecker by lazy {
         NetworkStatusChecker(getSystemService(ConnectivityManager::class.java))
     }
