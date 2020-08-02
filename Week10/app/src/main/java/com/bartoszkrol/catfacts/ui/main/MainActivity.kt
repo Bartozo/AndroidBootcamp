@@ -6,15 +6,13 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bartoszkrol.catfacts.R
 import com.bartoszkrol.catfacts.model.CatFact
-import com.bartoszkrol.catfacts.model.Failure
 import com.bartoszkrol.catfacts.model.Success
 import com.bartoszkrol.catfacts.networking.NetworkStatusChecker
 import com.bartoszkrol.catfacts.networking.RemoteApi
+import com.bartoszkrol.catfacts.utils.snack
 import com.bartoszkrol.catfacts.viewmodel.CatFactsViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -39,29 +37,40 @@ class MainActivity : AppCompatActivity() {
         getAllCatFacts()
     }
 
+    /**
+     * Download data from the API
+     */
     private fun getAllCatFacts() {
-        networkStatusChecker.performIfConnectedToInternet {
-            GlobalScope.launch(Dispatchers.Main) {
+        networkStatusChecker.performIfConnectedToInternet( {
+            CoroutineScope(Dispatchers.IO).launch {
                 val result = remoteApi.getCatFacts()
 
-                if (result is Success) {
-                    onGetCatFactsSuccess(result.data)
-                } else {
-                    if (result is Failure) {
-                        result.error?.printStackTrace()
+                withContext(Dispatchers.Main) {
+                    if (result is Success) {
+                        onGetCatFactsSuccess(result.data)
+                    } else {
+                        onGetCatFactsFailed()
                     }
                     onGetCatFactsFailed()
                 }
             }
-        }
+        }, {
+            catFactsRecyclerView.snack(getString(R.string.error_no_internet_problem))
+        })
     }
 
+    /**
+     * Add new data to the database
+     */
     private fun onGetCatFactsSuccess(catFacts: List<CatFact>) {
         catFactsViewModel.insertCatFacts(catFacts)
     }
 
+    /**
+     * Shows downloading error
+     */
     private fun onGetCatFactsFailed() {
-        println("failed to download data")
+        catFactsRecyclerView.snack(getString(R.string.error_server_problem))
     }
 
 }
