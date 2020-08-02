@@ -82,4 +82,9 @@ dependencies {
 
     // Worker + coroutines
     implementation "androidx.work:work-runtime-ktx:2.3.4"
+
+    // Koin for Android
+    implementation "org.koin:koin-android:2.0.1"
+    implementation "org.koin:koin-androidx-scope:2.0.1"
+    implementation "org.koin:koin-androidx-viewmodel:2.0.1"
 }
