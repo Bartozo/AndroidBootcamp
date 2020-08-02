@@ -1,6 +1,5 @@
 package com.bartoszkrol.catfacts.ui.main
 
-import android.net.ConnectivityManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -25,9 +24,8 @@ import org.koin.android.ext.android.inject
 class MainActivity : AppCompatActivity() {
 
     private val remoteApi: RemoteApi by inject()
-    private val networkStatusChecker by lazy {
-        NetworkStatusChecker(getSystemService(ConnectivityManager::class.java))
-    }
+    private val networkStatusChecker: NetworkStatusChecker by inject()
+
     private val catFactAdapter = CatFactAdapter()
     private val catFactsViewModel: CatFactsViewModel by lazy {
         ViewModelProvider(this, CatFactsViewModelFactory(App.getAppContext(), App.repository))

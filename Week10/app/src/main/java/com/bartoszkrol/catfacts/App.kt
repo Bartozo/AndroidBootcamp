@@ -1,13 +1,10 @@
 package com.bartoszkrol.catfacts
 
 import android.app.Application
-import androidx.room.Room
 import androidx.work.*
 import com.bartoszkrol.catfacts.database.CatFactsDatabase
 import com.bartoszkrol.catfacts.database.RoomRepository
 import com.bartoszkrol.catfacts.di.networkModule
-import com.bartoszkrol.catfacts.networking.RemoteApi
-import com.bartoszkrol.catfacts.networking.buildApiService
 import com.bartoszkrol.catfacts.worker.DownloadDataWorker
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin

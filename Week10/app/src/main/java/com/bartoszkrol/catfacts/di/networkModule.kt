@@ -1,5 +1,9 @@
 package com.bartoszkrol.catfacts.di
 
+import android.net.ConnectivityManager
+import androidx.core.content.ContextCompat.getSystemService
+import com.bartoszkrol.catfacts.App
+import com.bartoszkrol.catfacts.networking.NetworkStatusChecker
 import com.bartoszkrol.catfacts.networking.RemoteApi
 import com.bartoszkrol.catfacts.networking.buildApiService
 import org.koin.core.qualifier.named
@@ -22,6 +26,14 @@ val networkModule = module {
     // Remote API
     single {
         RemoteApi(get())
+    }
+
+    // Network Status module
+    // No't sure if this should be single or factory
+    // I have only 1 Activity that uses this class, but what If I will add more activities that
+    // require to check internet connection
+    factory {
+        NetworkStatusChecker(getSystemService(App.getAppContext(), ConnectivityManager::class.java))
     }
 
 }
