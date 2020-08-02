@@ -14,6 +14,7 @@ import org.koin.core.inject
 class DownloadDataWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params), KoinComponent {
 
     private val remoteApi: RemoteApi by inject()
+    private val repository: RoomRepository by inject()
 
     companion object {
         const val DOWNLOAD_DATA_WORKER = "DOWNLOAD_DATA_WORKER"
@@ -25,7 +26,7 @@ class DownloadDataWorker(context: Context, params: WorkerParameters) : Coroutine
         if (result is Success) {
             // Add new data to the database
             // LiveData will update recyclerView with a new facts about the cats
-            App.repository.insertCatFacts(result.data)
+            repository.insertCatFacts(result.data)
 
             return Result.success()
         } else {

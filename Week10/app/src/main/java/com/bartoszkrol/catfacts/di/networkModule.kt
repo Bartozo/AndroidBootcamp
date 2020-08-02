@@ -13,6 +13,7 @@ import org.koin.dsl.module
  * Network module used for a DI
  */
 val networkModule = module {
+
     // Base url
     single(named("BASE_URL")) {
         "https://cat-fact.herokuapp.com"

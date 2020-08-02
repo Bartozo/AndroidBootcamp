@@ -5,6 +5,7 @@ import androidx.work.*
 import com.bartoszkrol.catfacts.database.CatFactsDatabase
 import com.bartoszkrol.catfacts.database.RoomRepository
 import com.bartoszkrol.catfacts.di.networkModule
+import com.bartoszkrol.catfacts.di.repositoryModule
 import com.bartoszkrol.catfacts.worker.DownloadDataWorker
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
@@ -15,14 +16,6 @@ class App : Application() {
 
     companion object {
         private lateinit var instance: App
-
-        val catDao by lazy {
-            CatFactsDatabase.getDatabase(instance).catFactsDao()
-        }
-
-        val repository: RoomRepository by lazy {
-            RoomRepository(catDao)
-        }
 
         fun getAppContext() = instance
     }
@@ -64,7 +57,7 @@ class App : Application() {
     private fun startKoinModules() {
         startKoin {
             androidContext(this@App)
-            modules(listOf(networkModule))
+            modules(listOf(networkModule, repositoryModule))
         }
     }
 
