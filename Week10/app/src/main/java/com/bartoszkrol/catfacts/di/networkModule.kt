@@ -6,6 +6,7 @@ import com.bartoszkrol.catfacts.App
 import com.bartoszkrol.catfacts.networking.NetworkStatusChecker
 import com.bartoszkrol.catfacts.networking.RemoteApi
 import com.bartoszkrol.catfacts.networking.buildApiService
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
@@ -34,7 +35,7 @@ val networkModule = module {
     // I have only 1 Activity that uses this class, but what If I will add more activities that
     // require to check internet connection
     factory {
-        NetworkStatusChecker(getSystemService(App.getAppContext(), ConnectivityManager::class.java))
+        NetworkStatusChecker(getSystemService(androidContext(), ConnectivityManager::class.java))
     }
 
 }
