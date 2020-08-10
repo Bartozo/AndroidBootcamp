@@ -3,8 +3,8 @@ package com.bartoszkrol.catfacts.ui.main
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.bartoszkrol.catfacts.R
 import com.bartoszkrol.catfacts.model.CatFact
 import com.bartoszkrol.catfacts.model.Success
@@ -13,9 +13,13 @@ import com.bartoszkrol.catfacts.networking.RemoteApi
 import com.bartoszkrol.catfacts.utils.snack
 import com.bartoszkrol.catfacts.viewmodel.CatFactsViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         catFactsRecyclerView.layoutManager = LinearLayoutManager(this)
+        catFactsRecyclerView.addItemDecoration(
+            DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        )
         catFactsRecyclerView.adapter = catFactAdapter
 
         catFactsViewModel.getCatFacts().observe(this, Observer<List<CatFact>> { catFacts ->
