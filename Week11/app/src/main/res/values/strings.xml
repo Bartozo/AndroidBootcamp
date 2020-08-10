@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CatFacts</string>
+    <string name="avatar_description">Image of the user avatar</string>
+    <string name="user_textView_text">%1$s %2$s</string>
+    <string name="error_server_problem">Error. Couldn\'t download data from the server.</string>
+    <string name="error_no_internet_problem">Error. No connection with the internet.</string>
+</resources>
