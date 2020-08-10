@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bartoszkrol.catfacts.R
 import com.bartoszkrol.catfacts.model.CatFact
 import com.bartoszkrol.catfacts.model.Success
