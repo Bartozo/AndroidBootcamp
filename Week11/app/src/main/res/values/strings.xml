@@ -4,4 +4,5 @@
     <string name="user_textView_text">%1$s %2$s</string>
     <string name="error_server_problem">Error. Couldn\'t download data from the server.</string>
     <string name="error_no_internet_problem">Error. No connection with the internet.</string>
+    <string name="app_logo">Logo of the application that contains a nice cat image.</string>
 </resources>
