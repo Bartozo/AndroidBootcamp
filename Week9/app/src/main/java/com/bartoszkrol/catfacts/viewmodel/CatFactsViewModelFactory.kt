@@ -6,11 +6,11 @@ import androidx.lifecycle.ViewModelProvider
 import com.bartoszkrol.catfacts.database.RoomRepository
 import java.lang.IllegalArgumentException
 
-class CatFactsViewModelFactory(val application: Application, val repository: RoomRepository) : ViewModelProvider.Factory {
+class CatFactsViewModelFactory(val repository: RoomRepository) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(CatFactsViewModel::class.java)) {
-            return CatFactsViewModel(application, repository) as T
+            return CatFactsViewModel(repository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
