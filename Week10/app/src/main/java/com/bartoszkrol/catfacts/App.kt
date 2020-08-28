@@ -1,13 +1,13 @@
 package com.bartoszkrol.catfacts
 
 import android.app.Application
-import androidx.room.Room
 import androidx.work.*
-import com.bartoszkrol.catfacts.database.CatFactsDatabase
-import com.bartoszkrol.catfacts.database.RoomRepository
-import com.bartoszkrol.catfacts.networking.RemoteApi
-import com.bartoszkrol.catfacts.networking.buildApiService
+import com.bartoszkrol.catfacts.di.networkModule
+import com.bartoszkrol.catfacts.di.repositoryModule
+import com.bartoszkrol.catfacts.di.viewModelModule
 import com.bartoszkrol.catfacts.worker.DownloadDataWorker
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 import java.util.concurrent.TimeUnit
 
 
@@ -15,18 +15,6 @@ class App : Application() {
 
     companion object {
         private lateinit var instance: App
-
-        private val apiService by lazy { buildApiService() }
-
-        val remoteApi by lazy { RemoteApi(apiService) }
-
-        val catDao by lazy {
-            CatFactsDatabase.getDatabase(instance).catFactsDao()
-        }
-
-        val repository: RoomRepository by lazy {
-            RoomRepository(catDao)
-        }
 
         fun getAppContext() = instance
     }
@@ -36,6 +24,7 @@ class App : Application() {
         instance = this
 
         startDownloadingDataWorker()
+        startKoinModules()
     }
 
     /**
@@ -59,6 +48,16 @@ class App : Application() {
             ExistingPeriodicWorkPolicy.KEEP,
             work
         )
+    }
+
+    /**
+     * Creates modules for a DI
+     */
+    private fun startKoinModules() {
+        startKoin {
+            androidContext(this@App)
+            modules(listOf(networkModule, repositoryModule, viewModelModule))
+        }
     }
 
 }

@@ -6,7 +6,6 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 
-
 /**
  * Builds retrofit dependencies.
  */
@@ -15,14 +14,14 @@ fun buildClient(): OkHttpClient =
     OkHttpClient.Builder()
         .build()
 
-fun buildRetrofit(): Retrofit {
+fun buildRetrofit(baseUrl: String): Retrofit {
     val contentType = "application/json".toMediaType()
 
     return Retrofit.Builder()
         .client(buildClient())
-        .baseUrl(BASE_URL)
+        .baseUrl(baseUrl)
         .addConverterFactory(Json.nonstrict.asConverterFactory(contentType))
         .build()
 }
 
-fun buildApiService(): RemoteApiService = buildRetrofit().create(RemoteApiService::class.java)
+fun buildApiService(baseUrl: String): RemoteApiService = buildRetrofit(baseUrl).create(RemoteApiService::class.java)
